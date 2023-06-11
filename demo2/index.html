@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Capslock | Music Player</title>
+	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+	<link rel="icon" href="../assets/img/icon.ico" type="image/x-icon"/>
+
+	<!-- Fonts and icons -->
+	<script src="../assets/js/plugin/webfont/webfont.min.js"></script>
+	<script>
+		WebFont.load({
+			google: {"families":["Lato:300,400,700,900"]},
+			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['../assets/css/fonts.min.css']},
+			active: function() {
+				sessionStorage.fonts = true;
+			}
+		});
+	</script>
+
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/atlantis.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-background-color="light">
+	<div class="wrapper">
+		<div class="main-header">
+			<!--  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Logo Header --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+			<div class="logo-header" data-background-color="light-blue2">
+				
+				<a href="index.html" class="logo">
+					<img src="img/logo.png" alt="navbar brand" class="navbar-brand">
+				</a>
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<i class="icon-menu"></i>
+					</span>
+				</button>
+				<button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
+				<div class="nav-toggle">
+					<button class="btn btn-toggle toggle-sidebar">
+						<i class="icon-menu"></i>
+					</button>
+				</div>
+			</div>
+			<!--  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------End Logo Header --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+			<!--  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Navbar Header --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="light-blue2">
+				
+				<div class="container-fluid">
+					<div class="collapse" id="search-nav">
+						<form class="navbar-left navbar-form nav-search mr-md-3">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<button type="submit" class="btn btn-search pr-1">
+										<i class="fa fa-search search-icon"></i>
+									</button>
+								</div>
+								<input type="text" placeholder="Search ..." class="form-control">
+							</div>
+						</form>
+					</div>
+					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+						<li class="nav-item toggle-nav-search hidden-caret">
+							<a class="nav-link" data-toggle="collapse" href="#search-nav" role="button" aria-expanded="false" aria-controls="search-nav">
+								<i class="fa fa-search"></i>
+							</a>
+						</li>
+						<li class="nav-item dropdown hidden-caret">
+							<a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-envelope"></i>
+							</a>
+							<ul class="dropdown-menu messages-notif-box animated fadeIn" aria-labelledby="messageDropdown">
+								<li>
+									<div class="dropdown-title d-flex justify-content-between align-items-center">
+										Messages 									
+										<a href="#" class="small">Mark all as read</a>
+									</div>
+								</li>
+								<li>
+									<div class="message-notif-scroll scrollbar-outer">
+										<div class="notif-center">
+											<a href="#">
+												<div class="notif-img"> 
+													<img src="../assets/img/jm_denis.jpg" alt="Img Profile">
+												</div>
+												<div class="notif-content">
+													<span class="subject">Jimmy Denis</span>
+													<span class="block">
+														How are you ?
+													</span>
+													<span class="time">5 minutes ago</span> 
+												</div>
+											</a>
+											<a href="#">
+												<div class="notif-img"> 
+													<img src="../assets/img/chadengle.jpg" alt="Img Profile">
+												</div>
+												<div class="notif-content">
+													<span class="subject">Chad</span>
+													<span class="block">
+														Ok, Thanks !
+													</span>
+													<span class="time">12 minutes ago</span> 
+												</div>
+											</a>
+											<a href="#">
+												<div class="notif-img"> 
+													<img src="../assets/img/mlane.jpg" alt="Img Profile">
+												</div>
+												<div class="notif-content">
+													<span class="subject">Jhon Doe</span>
+													<span class="block">
+														Ready for the meeting today...
+													</span>
+													<span class="time">12 minutes ago</span> 
+												</div>
+											</a>
+											<a href="#">
+												<div class="notif-img"> 
+													<img src="../assets/img/talha.jpg" alt="Img Profile">
+												</div>
+												<div class="notif-content">
+													<span class="subject">Talha</span>
+													<span class="block">
+														Hi, Apa Kabar ?
+													</span>
+													<span class="time">17 minutes ago</span> 
+												</div>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a class="see-all" href="javascript:void(0);">See all messages<i class="fa fa-angle-right"></i> </a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown hidden-caret">
+							<a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-bell"></i>
+								<span class="notification">4</span>
+							</a>
+							<ul class="dropdown-menu notif-box animated fadeIn" aria-labelledby="notifDropdown">
+								<li>
+									<div class="dropdown-title">You have 4 new notification</div>
+								</li>
+								<li>
+									<div class="notif-scroll scrollbar-outer">
+										<div class="notif-center">
+											<a href="#">
+												<div class="notif-icon notif-primary"> <i class="fa fa-user-plus"></i> </div>
+												<div class="notif-content">
+													<span class="block">
+														New user registered
+													</span>
+													<span class="time">5 minutes ago</span> 
+												</div>
+											</a>
+											<a href="#">
+												<div class="notif-icon notif-success"> <i class="fa fa-comment"></i> </div>
+												<div class="notif-content">
+													<span class="block">
+														Rahmad commented on Admin
+													</span>
+													<span class="time">12 minutes ago</span> 
+												</div>
+											</a>
+											<a href="#">
+												<div class="notif-img"> 
+													<img src="../assets/img/profile2.jpg" alt="Img Profile">
+												</div>
+												<div class="notif-content">
+													<span class="block">
+														Reza send messages to you
+													</span>
+													<span class="time">12 minutes ago</span> 
+												</div>
+											</a>
+											<a href="#">
+												<div class="notif-icon notif-danger"> <i class="fa fa-heart"></i> </div>
+												<div class="notif-content">
+													<span class="block">
+														Farrah liked Admin
+													</span>
+													<span class="time">17 minutes ago</span> 
+												</div>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a class="see-all" href="javascript:void(0);">See all notifications<i class="fa fa-angle-right"></i> </a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown hidden-caret">
+							<a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
+								<i class="fas fa-layer-group"></i>
+							</a>
+							<div class="dropdown-menu quick-actions quick-actions-info animated fadeIn">
+								<div class="quick-actions-header">
+									<span class="title mb-1">Quick Actions</span>
+									<span class="subtitle op-8">Shortcuts</span>
+								</div>
+								<div class="quick-actions-scroll scrollbar-outer">
+									<div class="quick-actions-items">
+										<div class="row m-0">
+											<a class="col-6 col-md-4 p-0" href="#">
+												<div class="quick-actions-item">
+													<i class="flaticon-file-1"></i>
+													<span class="text">Generated Report</span>
+												</div>
+											</a>
+											<a class="col-6 col-md-4 p-0" href="#">
+												<div class="quick-actions-item">
+													<i class="flaticon-database"></i>
+													<span class="text">Create New Database</span>
+												</div>
+											</a>
+											<a class="col-6 col-md-4 p-0" href="#">
+												<div class="quick-actions-item">
+													<i class="flaticon-pen"></i>
+													<span class="text">Create New Post</span>
+												</div>
+											</a>
+											<a class="col-6 col-md-4 p-0" href="#">
+												<div class="quick-actions-item">
+													<i class="flaticon-interface-1"></i>
+													<span class="text">Create New Task</span>
+												</div>
+											</a>
+											<a class="col-6 col-md-4 p-0" href="#">
+												<div class="quick-actions-item">
+													<i class="flaticon-list"></i>
+													<span class="text">Completed Tasks</span>
+												</div>
+											</a>
+											<a class="col-6 col-md-4 p-0" href="#">
+												<div class="quick-actions-item">
+													<i class="flaticon-file"></i>
+													<span class="text">Create New Invoice</span>
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item dropdown hidden-caret">
+							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
+								<div class="avatar-sm">
+									<img src="../assets/img/profile2.jpg" alt="..." class="avatar-img rounded-circle">
+								</div>
+							</a>
+							<ul class="dropdown-menu dropdown-user animated fadeIn">
+								<div class="dropdown-user-scroll scrollbar-outer">
+									<li>
+										<div class="user-box">
+											<div class="avatar-lg"><img src="../assets/img/profile.jpg" alt="image profile" class="avatar-img rounded"></div>
+											<div class="u-text">
+												<h4>Siya Percy</h4>
+												<p class="text-muted">hello@example.com</p><a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">My Profile</a>
+										<a class="dropdown-item" href="#">My Balance</a>
+										<a class="dropdown-item" href="#">Inbox</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">Account Setting</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">Logout</a>
+									</li>
+								</div>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!--  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------End Navbar --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+		</div>
+
+		<!--  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Sidebar --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+		<div class="sidebar sidebar-style-2" data-background-color="beige">
+			<div class="sidebar-wrapper scrollbar scrollbar-inner">
+				<div class="sidebar-content">
+					
+									<ul class="nav nav-primary">
+						<li class="nav-item active">
+							<a href="index.html" class="collapsed" aria-expanded="false">
+								<i class="fas fa-home"></i>
+								<p>Home</p>
+							</a>
+							
+						</li>
+						<li class="nav-section">
+							<span class="sidebar-mini-icon">
+								<i class="fa fa-ellipsis-h"></i>
+							</span>
+							<h4 class="text-section">Dashabord</h4>
+						</li>
+						<li class="nav-item">
+							<a href="Song.html">
+								<i class="fas fa-desktop"></i>
+								<p>Favorites</p>
+								<span class="badge badge-success">4</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="Song.html">
+								<i class="fas fa-desktop"></i>
+								<p>New Stuff</p>
+								<span class="badge badge-success">14</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							
+							<i class="fas fa-pen-square"></i>
+							<a href="Song.html">
+								<p>Albums</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a data-toggle="collapse" href="#base">
+								<i class="fas fa-layer-group"></i>
+								<p>Active Projects</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="base">
+								<ul class="nav nav-collapse">
+									<li>
+										<div class="progress-card">
+	<div class="progress-status">
+		<span class="text-muted">Task Pending</span>
+		<span class="text-muted fw-bold"> 60%</span>
+	</div>
+	<div class="progress">
+		<div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" data-toggle="tooltip" data-placement="top" title="" data-original-title="60%"></div>
+	</div>
+</div>
+									</li>
+									<li>
+										<a href="components/simple-line-icons.html">
+											<span class="sub-item">Simple Line Icons</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a data-toggle="collapse" href="#sidebarLayouts">
+								<i class="fas fa-th-list"></i>
+								<p>Payment Options</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="sidebarLayouts">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="sidebar-style-1.html">
+											<span class="sub-item">Sidebar Style 1</span>
+										</a>
+									</li>
+									<li>
+										<a href="overlay-sidebar.html">
+											<span class="sub-item">Overlay Sidebar</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a data-toggle="collapse" href="#forms">
+								<i class="fas fa-pen-square"></i>
+								<p>Financial Goals</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="forms">
+								<ul class="nav nav-collapse">
+									<li><div class="progress-card">
+	<div class="progress-status">
+		<span class="text-muted">Almost there</span>
+		<span class="text-muted fw-bold"> 70%</span>
+	</div>
+	<div class="progress" style="height: 6px;">
+		<div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" data-toggle="tooltip" data-placement="top" title="" data-original-title="70%"></div>
+	</div>
+</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a data-toggle="collapse" href="#tables">
+								<i class="fas fa-table"></i>
+								<p>Pay Cycle</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="tables">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="tables/tables.html">
+											<span class="sub-item">Basic Table</span>
+										</a>
+									</li>
+									<li>
+										<a href="tables/datatables.html">
+											<span class="sub-item">Datatables</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a data-toggle="collapse" href="#maps">
+								<i class="fas fa-map-marker-alt"></i>
+								<p>Favourite</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="maps">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="maps/jqvmap.html">
+											<span class="sub-item">JQVMap</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						
+				<div class="container-fluid">
+					<nav class="pull-left">
+						<ul class="nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									Help
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									Licenses
+								</a>
+							</li>
+						</ul>
+					</nav>			
+				</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+        
+		<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------End Sidebar----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+		<div class="main-panel">
+				<style>
+					/*
+
+Visual Admin Template
+
+https://templatemo.com/tm-455-visual-admin
+
+
+
+TABLE OF CONTENT
+	1. Universal Styles
+	2. Left Column
+	3. Right Column
+	4. Charts & Maps
+	5. Login
+	6. Manage Users
+	7. Preferences
+	8. Media Queries
+----------------------------------------------*/
+/* 1. Universal Styles
+----------------------------------------------*/
+
+.templatemo-block {	display: block; }
+.templatemo-position-relative {	position: relative; }
+.blue-text { color: #39ADB4; }
+.white-text { color: white; }
+.green-bg {	background-color: #39ADB4; }
+.yellow-bg { background-color: #D8D138; }
+.white-bg {	background-color: white; }
+.white-bg .fa-times { background-color: #d7d7d7; }
+.white-bg .fa-times:hover {	background: #83ccd1; }
+.orange-bg {
+	background-color: #F17A54;
+	color: white;
+}
+.orange-bg .fa-times {	background-color: #F0A790; }
+.orange-bg .fa-times:hover { background-color: #E14311; }
+.pink-bg {
+	background-color: #D7425C;
+	color: white;
+}
+.pink-bg .fa-times { background-color: #E57C8F;	}
+.pink-bg .fa-times:hover { background-color: #BD1F3B; }
+.blue-bg {
+	background-color: #3275BB;
+	color: white;
+}
+.blue-bg .fa-times { background-color: #6792C0; }
+.blue-bg .fa-times:hover { background-color: #2C639C; }
+.light-gray-bg { background-color: #efefef; }
+.padding-right-25 {	padding-right: 25px; }
+.margin-bottom-0 {	margin-bottom: 0; }
+.margin-bottom-5 {	margin-bottom: 5px; }
+.margin-bottom-10 {	margin-bottom: 10px; }
+.margin-bottom-30 {	margin-bottom: 30px; }
+.margin-bottom-70 {	margin-bottom: 70px; }
+.margin-right-15 { margin-right: 15px; }
+.margin-10 { margin: 10px; }
+.width-100 { width: 100%; }
+.no-border { border: none; }
+.border-radius-10 { border-radius: 10px; }
+footer { padding: 15px; }
+
+/* 2. Left Column
+-----------------------------*/
+.templatemo-sidebar { width: 300px; }
+.square {
+	width: 25px;
+	height: 25px;
+	border: 3px solid #895a13;
+	display: inline-block;
+	vertical-align: middle;
+}
+.circle {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+}
+.templatemo-site-header { margin: 25px 30px; }
+.templatemo-site-header h1 {
+	color: white;
+	display: inline-block;
+	font-size: 1.8em;
+	font-weight: 300;
+	letter-spacing: 1.5px;
+	margin: 0 5px;	
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+.profile-photo-container { position: relative; }
+.profile-photo-overlay {
+	background-color: rgba(4, 152, 114, 0.35);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: all 0.3s ease;
+}
+.profile-photo-overlay:hover { background-color: rgba(4, 152, 114, 0); }
+
+/* Search form */
+.templatemo-search-form {
+	font-size: 1.1em;
+	margin: 50px 20px;		
+}
+.templatemo-search-form .input-group { width: 100%; }
+.templatemo-search-form .input-group .form-control {
+	background-color: #18191b;
+	border: none;
+	border-radius: 10px;
+	color: #DDD;
+	padding-left: 30px;
+}
+.form-control:focus {
+  border-color: #857131;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(19,137,95,.075),0 0 8px rgba(19,137,95,.6);
+}
+.form-control.highlight {
+	background-color: #39ADB4;
+	color: white;
+}
+.form-control.highlight::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #ccc;
+}
+.form-control.highlight:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #ccc;
+   opacity:  1;
+}
+.form-control.highlight::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #ccc;
+   opacity:  1;
+}
+.form-control.highlight:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #ccc;
+}
+.templatemo-search-form .input-group { position: relative; }
+.fa-search {
+    height:32px;
+    width:32px;
+    border: none;
+    cursor: pointer;
+    color:white;
+    background:transparent;
+    position:absolute;
+    top: 0;
+	left: 0;
+	z-index: 100;
+}
+.mobile-menu-icon { 
+	cursor:pointer;
+	display:none; 
+}
+.templatemo-left-nav li { font-weight: 300; }
+.templatemo-left-nav a.active,
+.templatemo-left-nav a:hover {
+	background: #18191b;
+	border-left: 8px solid #4d3f11;
+}
+.templatemo-left-nav a {
+	color: #e9e9ea;
+	display: block;
+	padding: 30px;
+	transition: all 0.3s ease;
+}
+.templatemo-left-nav .fa { margin-right: 15px; }
+
+/* 3. Right Column
+------------------------------*/
+.templatemo-top-nav-container {
+	background-color: white;
+	padding: 28px 50px;
+ 	box-shadow: 0px 0px 2px 2px rgba(161, 159, 159, 0.18);
+}
+.templatemo-top-nav li {
+    float: left;
+    list-style: none;
+}
+.templatemo-top-nav a {
+	color: #7f7f7f;
+    display: block;
+    padding: 0 50px;
+    border-left: 2px solid #c5c5c5;
+}
+.templatemo-top-nav li:last-child a { border-right: 2px solid #c5c5c5; }
+.templatemo-top-nav a:hover,
+.templatemo-top-nav a.active {
+	color: #b4b239;
+}
+
+/* Main Content Area */
+.templatemo-content {
+  margin-top: 0px;
+  min-height: 600px;
+  padding: 0;  
+  overflow-x: hidden;
+}
+.templatemo-content-container {	padding: 40px 50px; }
+.templatemo-flex-row {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.col-1 {
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+.col-2 {
+	-webkit-flex: 2;
+	    -ms-flex: 2;
+	        flex: 2;
+}
+
+/* Content Widget */
+.templatemo-content-widget {
+	border-radius: 10px;
+	padding: 30px;	
+	position: relative;
+	margin: 10px;
+ 	box-shadow: 0px 0px 1px 1px rgba(161, 159, 159, 0.1);
+}
+.templatemo-content-widget.no-padding {	padding: 0; }
+.fa-times {
+	border-radius: 15px;
+  	color: white;
+  	cursor: pointer;
+	padding: 4px 5px;
+  	position: absolute;
+  	top: 15px;
+  	right: 15px;
+  	z-index: 100;
+  	transition: all 0.3s ease;
+}
+.fa-heart {
+  color: white;
+  cursor: pointer;
+  font-size: 1.4em;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+.fa-heart:hover { color: #39ADB4; }
+.progress {	display: block; }
+.panel-default>.panel-heading {
+	background-color: #756d1e;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	color: white;
+	padding: 15px;
+}
+.panel-default .fa-times {
+	top: 12px;
+	background-color: #67B5B9;
+}
+.panel-default .fa-times:hover { background-color: #635439;	}
+.panel { border-radius: 10px; }
+.pagination-wrap {
+	margin-right: 10px;
+	text-align: right;
+}
+.pagination>li>a {
+	border-color: #E9E8E8;
+	color: #a6a6a6;
+	margin: 2px;
+	padding: 10px;	
+}
+.pagination>li>a,
+.pagination>li:first-child>a,
+.pagination>li:last-child>a {
+	border-radius: 10px;
+}
+.pagination>.active>a, 
+.pagination>.active>a:focus, 
+.pagination>.active>a:hover {
+	background-color: #6b5e35;
+	border-color: #E9E8E8;
+}
+.table { margin-bottom: 0; }
+.table>tbody>tr>td { padding: 10px 15px; }
+.table>thead>tr>td { padding: 15px; }
+.media { margin-top: 0; }
+.media-body { vertical-align: middle; }
+.badge {
+	background-color: #d6973d;
+	border-radius: 5px;
+	margin-left: 5px;
+	padding: 5px 10px;
+	vertical-align: top;
+}
+.templatemo-img-bordered {
+	border: 1px solid #ccc;
+	padding: 3px;
+}
+
+/* 4. Charts & Maps - http://codepen.io/shoogledesigns/pen/BfLkA
+----------------------------------------------------------------*/
+.templatemo-chart {
+	width: 100%;
+	height: 300px;
+}
+#timeline_div {	height: auto; }
+
+/* JQVMap */
+.jqvmap-zoomin, .jqvmap-zoomout {
+    width: 15px;
+    height: 15px;
+}
+.vmap { height: 300px; }
+
+/* 5. Login
+------------------------------*/
+.templatemo-login-widget {
+	max-width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 50px;
+}
+.templatemo-login-widget .square {
+	width: 18px;
+	height: 18px;
+}
+.templatemo-login-widget header { margin-bottom: 40px; }
+.templatemo-login-widget h1 {
+	display: inline-block;
+	font-size: 1.8em;
+	text-align: center;
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+.templatemo-login-form .form-group { margin-bottom: 20px; }
+.templatemo-login-form .form-group:last-child {	margin-bottom: 0; }
+.input-group-addon { background: none; }
+.btn-primary {
+	border-radius: 2px;
+	background-color: #39ADB4;
+	border: none;	
+	color: white;	
+}
+.btn-primary:hover { background-color: #2A858B; }
+.templatemo-blue-button, 
+.templatemo-white-button {
+	border-radius: 2px;
+	padding: 10px 30px;
+	text-transform: uppercase;
+	transition: all 0.3s ease;
+}
+.templatemo-blue-button {
+	background-color: #39ADB4;
+	border: none;	
+	color: white;	
+}
+.templatemo-blue-button:hover {	background-color: #2A858B; }
+.templatemo-white-button {
+	background-color: white;
+	border: 1px solid #39ADB4;	
+	color: #39ADB4;	
+}
+.templatemo-white-button:hover { background-color: #eff2f3;	}
+.templatemo-register-widget {
+	max-width: 450px;
+	padding: 15px;
+	text-align: center;
+}
+.templatemo-register-widget p {	margin-bottom: 0; }
+.checkbox label { padding-left: 0; }
+.font-weight-400 { font-weight: 400; }
+
+/* Style checkboxes and radio buttons
+http://webdesign.tutsplus.com/tutorials/quick-tip-easy-css3-checkboxes-and-radio-buttons--webdesign-8953 */
+input[type="checkbox"] {  display:none; }
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:26px;
+    height:25px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:url(../images/checkbox-radio-sheet.png) left top no-repeat;
+    cursor:pointer;
+}
+input[type="checkbox"]:checked + label span {
+    background:url(../images/checkbox-radio-sheet.png) -26px top no-repeat;
+}
+input[type="radio"] { display:none; }
+input[type="radio"] + label span {
+    display:inline-block;
+    width:26px;
+    height:25px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:url(../images/checkbox-radio-sheet.png) -52px top no-repeat;
+    cursor:pointer;
+}
+input[type="radio"]:checked + label span {
+    background:url(../images/checkbox-radio-sheet.png) -78px top no-repeat;
+}
+
+/* 6. Manage Users
+------------------------------*/
+.templatemo-sort-by:hover {	color: #ded9d9; }
+.templatemo-edit-btn {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	color: black;
+	padding: 5px 15px;
+	transition: all 0.3s ease;
+}
+.templatemo-edit-btn:hover {
+	background-color: #39ADB4;
+	border: 1px solid #39ADB4;
+	color: white;
+}
+.templatemo-link { color: black; }
+.templatemo-link:hover { color: #39ADB4; }
+.templatemo-overflow-hidden { overflow: hidden; }
+.templatemo-user-table thead {
+	background-color: #39ADB4;
+	color: white;
+}
+.panel>.table-responsive:last-child>.table:last-child, .panel>.table:last-child {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.panel>.table:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.templatemo-social-icons-container {
+	background-color: #f4f3f3;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	box-shadow: 0px 0px 1px 1px rgba(161, 159, 159, 0.1);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top: 1px solid #dedede;
+}
+.social-icon-wrap {
+	width: 33%;
+	height: 100%;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+.social-icon-wrap:nth-child(2) {
+	border-left: 1px solid #dedede;
+	border-right: 1px solid #dedede;
+}
+.templatemo-social-icon {
+	background-color: #a6a6a6;
+	border-radius: 50%;
+	color: white;
+	cursor: pointer;
+	font-size: 1.5em;
+	padding-top: 8px;
+	width: 35px;
+	height: 35px;
+	transition: all 0.3s ease;
+}
+.templatemo-social-icon:hover {	background-color: #39ADB4; }
+.templatemo-content-img-bg {
+	background-position: center;
+	background-attachment: stretch;
+	min-height: 300px;
+}
+.content-bg-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+}
+.view-img-btn-wrap {
+	position: absolute;
+	bottom: 50px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+.templatemo-view-img-btn {
+	background-color: #f4f3f3;	
+	border: none;
+	border-radius: 5px;
+	color: #a6a6a6;
+	padding: 10px 50px;
+	text-transform: uppercase;
+	transition: all 0.3s ease;
+}
+.templatemo-view-img-btn:hover {
+	background-color: #39ADB4;
+	color: white;
+}
+
+/* 7. Preferences
+-------------------------------*/
+.has-success .checkbox, .has-success .checkbox-inline, .has-success .control-label, .has-success .help-block, 
+.has-success .radio, .has-success .radio-inline, .has-success.checkbox label, .has-success.checkbox-inline label, 
+.has-success.radio label, .has-success.radio-inline label {
+	color: #13895F;
+}
+.has-success .form-control { border-color: #13895F; }
+.has-warning .checkbox, .has-warning .checkbox-inline, .has-warning .control-label, .has-warning .help-block, 
+.has-warning .radio, .has-warning .radio-inline, .has-warning.checkbox label, .has-warning.checkbox-inline label, 
+.has-warning.radio label, .has-warning.radio-inline label {
+	color: #CF922C;
+}
+.has-warning .form-control { border-color: #CF922C; }
+.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, 
+.has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, 
+.has-error.radio label, .has-error.radio-inline label {
+	color: #D7425C;
+}
+.has-error .form-control { border-color: #D7425C; }
+.templatemo-multi-select {
+	min-width: 200px;
+	height: 100px;
+	overflow-y: scroll;	
+}
+
+/* 8. Media Queries
+------------------------------*/
+@media screen and (max-width: 1199px) and (min-width: 991px) {
+	.templatemo-site-header { margin: 25px; }
+	.templatemo-sidebar { width: 250px;	}
+	.templatemo-search-form { margin: 20px; }
+	nav li { font-size: 1em; }
+	.templatemo-left-nav a { padding: 15px; }
+	.templatemo-top-nav a { padding: 0 30px; }
+}
+
+@media screen and (max-width: 1199px) {
+	.templatemo-flex-row.flex-content-row { display: block;	}
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+	.templatemo-site-header,
+	.templatemo-search-form { 
+		margin: 15px; 
+	}
+	.templatemo-sidebar { width: 200px; } 
+	.templatemo-site-header h1 { font-size: 1.6em; }
+	.square { 
+		width: 20px; 
+		height: 20px;
+	}
+	.templatemo-left-nav a.active,
+	.templatemo-left-nav a:hover {
+		border-left: 6px solid #896413;		
+	}	
+	.templatemo-top-nav-container {	padding: 17px 30px;	}
+	.templatemo-top-nav a { padding: 0 15px; }
+}
+
+@media screen and (max-width: 992px) {
+	nav li { font-size: 1em; }
+	.templatemo-left-nav a { padding: 15px 10px; }	
+	.templatemo-content-container {	padding: 10px; }
+}
+@media only screen and (min-width: 768px) {
+	.templatemo-left-nav {	display: block !important; }
+}
+@media screen and (max-width: 767px) {
+	.templatemo-flex-row { display: block; }
+	.templatemo-site-header { margin: 20px 15px; }
+	.profile-photo-container {	display: none; /* Hide profile photo on mobile view */	}
+	.templatemo-search-form { margin: 10px; }
+	.templatemo-top-nav-container {	padding: 10px; }
+	.templatemo-top-nav a { 
+		border-left: 1px solid #c5c5c5;
+		padding: 0 7px; 
+	}
+	.templatemo-top-nav li:last-child a { border-right: 1px solid #c5c5c5; }
+	.templatemo-content-widget { padding: 15px;	}
+
+	/* Left column */
+	.templatemo-left-nav {
+		display: none;
+		position: fixed;
+		top: 10px;
+		right: 50px;		
+		height: 300px;
+		overflow: auto;
+		width: 200px;
+		z-index: 999;
+	}
+	.templatemo-left-nav a.active, 
+	.templatemo-left-nav a:hover {
+		border-left: 4px solid #13895F;	
+	}
+	.mobile-menu-icon {
+		cursor: pointer;
+		display: block;
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		z-index: 1000;
+	}
+	.mobile-menu-icon:hover .fa { background-color: rgba(19,137,95,0.8); }
+	.mobile-menu-icon .fa {
+		color: #fff;
+		background-color: rgba(19,137,95,0.4);
+		font-size: 1.5em;
+		width: 40px;
+		height: 40px;
+		padding-top: 9px;
+		padding-left: 11px;
+	}
+}
+
+			</style>
+			<div class="content">
+				<main>
+					  <!-- Musics Section Start -->
+					  <section class="music-sec"> 
+
+						<!-- Top Cover Start-->
+		
+						<div class="cover">
+							 <img src="img/Shigatsu.jpg" alt="" class="cover__img" id="recommended-image">
+							 <div class="cover__text">
+								 <h1 class="cover__title">The Next Big Thing!</h1>
+								   <a href="#" class="btn cover__play-btn" id="recommended-play-btn"> 
+										<span>Play Now</span>
+										<span class="material-icons">
+										play_circle_filled
+									   </span>  
+								</a>
+							 </div>
+						 </div>
+		
+						 <!-- Top Cover End-->
+		
+					
+						 <div class="music-con">
+		
+							<h1 class="heading-sec">My Favorites</h1>
+		
+							<!-- Music List Scroll Start-->
+		
+							<div class="music-con__list scroll-bar-hide">
+		
+									<!-- <div class="music-con__item">
+										<div class="music-con__img">
+											<img src="img/Cover-2.jpg" alt="">
+											<span class="music-con__play-btn">
+												<span class="material-icons play-btn">
+													play_circle_outline
+												</span>
+											</span>
+										</div>
+										<div class="music-list__text">
+											<h3 class="heading-3">   Gunaah  </h3>
+											<p class="music-artist-name">  Max Glover, Carl Brown </p>
+										</div>
+										
+									</div> -->
+							</div>
+		
+							  <!-- Music List Scroll End-->
+						 </div>
+		
+						 <div class="music-hor music-con">
+		
+							<h1 class="music-con__heading heading-sec">New Entries</h1>
+		
+							<div class="music-hor__list">
+		
+								 <!-- <div class="music-hor__item">
+									<div class="music-hor__item-inner">
+										<img src="img/album - 3.png" class="music-hor__img">
+										<h3 class="music-artist-name">Let me love</h3>
+									</div>
+		
+									<div class="music-hor__item-inner"> 
+		
+										<p class="music-hor__music-duration">02 : 30</p>
+					
+										<div class="music-hor__btn">
+											<span class="material-icons">
+												play_circle_filled
+											   </span>  
+										</div>
+															   
+									</div>
+		
+								</div>                            -->
+		
+							</div>
+				
+		
+						</div>
+		
+						<div class="music-con">
+		
+							<h1 class="heading-sec">Top Rated Songs</h1>
+		
+							<!-- Music List Scroll Start 2-->
+		
+							<div class="music-con__list scroll-bar-hide">
+		
+									<!-- <div class="music-con__item">
+										<div class="music-con__img">
+											<img src="img/Cover-2.jpg" alt="">
+											<span class="music-con__play-btn">
+												<span class="material-icons play-btn">
+													play_circle_outline
+												</span>
+											</span>
+										</div>
+										<div class="music-list__text">
+											<h3 class="heading-3">   Gunaah  </h3>
+											<p class="music-artist-name">  Max Glover, Carl Brown </p>
+										</div>
+										
+									</div>  
+									-->
+							</div>
+		
+							  <!-- Music List Scroll End 2-->
+						 </div>
+					
+					</section>
+					<!-- Musics Section End -->
+				</main>
+			  <!-- Music { Play Btn  /  Progress Bar / }  Start-->
+
+			  <section class="music-controller">
+
+				<div class="music-controller__progress-bar">
+					<span class="music-controller__progress-bar-fill"></span>
+				</div>
+		
+				<div class="music-controller__list">
+		
+						<div class="music-controller__item">
+							<img src="img/Faded.jpg" alt="" class="music-controller__img audio-image">
+							<h3  class="music-artist-name audio-name" style="width:9rem;">Let me love</h3>
+						</div>
+		
+						<div class="music-controller__item"> 
+		
+							<div class="music-controller__btn audio-prev-btn">
+								<span class="material-icons">
+									skip_previous
+								</span>
+							</div>
+		
+							<div class="music-controller__btn audio-play-pause-btn">
+								<span class="material-icons">
+									play_circle_filled
+								   </span>  
+							</div>
+							<div class="music-controller__btn audio-next-btn">
+								<span class="material-icons">
+									skip_next
+								</span>
+			
+							</div>
+						   
+						</div>
+						<div class="music-controller__item phone-disable">
+		
+							<div class="music-controller__btn audio-shuffle">
+								<span class="material-icons">
+									shuffle
+								 </span>
+							</div>
+							<div class="music-controller__btn audio-volume">
+								<span class="material-icons">
+									volume_up
+								</span>
+							</div>
+							<div class="music-controller__btn audio-repeat">
+								<span class="material-icons">
+									repeat
+								 </span>
+							</div>
+		
+						</div>
+				</div>
+		
+		
+		
+			</section>
+		
+		  <!--- Open Music Player-->
+		
+			<section class="audio-player" id="audio-player-fullscreen">
+				
+		
+				<div class="audio-player__wrapper">
+		
+					<img src="img/Yaara.jpg" alt="" class="audio-player__img audio-image">
+				  
+					<div class="audio-player__text">
+						<h3 class="heading-3 audio-name">   Gunaah  </h3>
+						<p class="music-artist-name audio-singer-name">  Max Glover, Carl Brown </p>    
+					</div>  
+		
+				   <div class="audio-player__item audio-player__item--1">
+		
+						<div class="audio-player__btn-top audio-shuffle">
+							<span class="material-icons">
+								shuffle
+							</span>
+						</div>
+						<div class="audio-player__btn-top audio-volume">
+							<span class="material-icons">
+								volume_up
+							</span>
+						</div>
+						<div class="audio-player__btn-top audio-repeat">
+							<span class="material-icons">
+								repeat
+							</span>
+						</div>
+		
+				   </div>
+		
+		
+				   <div class="audio-player__timing-update">
+						<h3 class="audio-time" id="current-duration"> 01 : 06 </h3>
+						<h3 class="audio-time" id="end-duration"> 01 : 06 </h3>
+				  </div>
+				   <div class="audio-player__item">
+						<div class="music-controller__progress-bar audio-player__progress-bar">
+							<span class="music-controller__progress-bar-fill"></span>
+						</div>               
+				   </div>
+		
+				   <div class="audio-player__item audio-player__item--playBtn">
+		
+						<div class="audio-player__btn-bottom audio-prev-btn">
+							<span class="material-icons">
+								skip_previous
+							</span>
+						</div>
+		
+						<div class="audio-player__btn-bottom audio-play-pause-btn">
+							<span class="material-icons">
+								play_circle_filled
+							</span>  
+						</div>
+						<div class="audio-player__btn-bottom audio-next-btn">
+							<span class="material-icons">
+								skip_next
+							</span>
+						</div>
+		
+				   </div>
+		   
+				</div>
+		
+			</section>
+			
+			 
+			 <!-- Music { Play Btn  /  Progress Bar / }  End-->
+		
+			 <audio id="audio" class="audio" style="display: none;">
+				<source src="mp3/Gunaah.mp3"></source>
+			</audio>
+	</div>
+            
+            
+                <!-- Music { Play Btn  /  Progress Bar / }  End-->
+
+     <audio id="audio" class="audio" style="display: none;">
+        <source src="mp3/Gunaah.mp3"></source>
+    </audio>
+    <!-- Including External JavaScript File Here -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha256-eVNjHw5UeU0jUqPPpZHAkU1z4U+QFBBY488WvueTm88=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+
+	<!----------------------------------Amen Amen------------->
+            
+	<!--   Core JS Files   -->
+	<script src="../assets/js/core/jquery.3.2.1.min.js"></script>
+	<script src="../assets/js/core/popper.min.js"></script>
+	<script src="../assets/js/core/bootstrap.min.js"></script>
+
+	<!-- jQuery UI -->
+	<script src="../assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="../assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+
+	<!-- jQuery Scrollbar -->
+	<script src="../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+
+
+	<!-- Chart JS -->
+	<script src="../assets/js/plugin/chart.js/chart.min.js"></script>
+
+	<!-- jQuery Sparkline -->
+	<script src="../assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+
+	<!-- Chart Circle -->
+	<script src="../assets/js/plugin/chart-circle/circles.min.js"></script>
+
+	<!-- Datatables -->
+	<script src="../assets/js/plugin/datatables/datatables.min.js"></script>
+
+	<!-- Bootstrap Notify -->
+	<script src="../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+
+	<!-- jQuery Vector Maps -->
+	<script src="../assets/js/plugin/jqvmap/jquery.vmap.min.js"></script>
+	<script src="../assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
+
+	<!-- Sweet Alert -->
+	<script src="../assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+
+	<!-- Atlantis JS -->
+	<script src="../assets/js/atlantis.min.js"></script>
+
+	<!-- Atlantis DEMO methods, don't include it in your project! -->
+	<script src="../assets/js/setting-demo.js"></script>
+	<script src="../assets/js/demo.js"></script>
+	<script>
+		$('#lineChart').sparkline([102,109,120,99,110,105,115], {
+			type: 'line',
+			height: '70',
+			width: '100%',
+			lineWidth: '2',
+			lineColor: 'rgba(255, 255, 255, .5)',
+			fillColor: 'rgba(255, 255, 255, .15)'
+		});
+
+		$('#lineChart2').sparkline([99,125,122,105,110,124,115], {
+			type: 'line',
+			height: '70',
+			width: '100%',
+			lineWidth: '2',
+			lineColor: 'rgba(255, 255, 255, .5)',
+			fillColor: 'rgba(255, 255, 255, .15)'
+		});
+
+		$('#lineChart3').sparkline([105,103,123,100,95,105,115], {
+			type: 'line',
+			height: '70',
+			width: '100%',
+			lineWidth: '2',
+			lineColor: 'rgba(255, 255, 255, .5)',
+			fillColor: 'rgba(255, 255, 255, .15)'
+		});
+	</script>
+</body>
+</html>
