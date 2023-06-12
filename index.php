@@ -1,0 +1,1 @@
+require_once('demo2/index.html');

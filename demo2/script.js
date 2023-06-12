@@ -7,18 +7,18 @@ window.onload = () =>{
 
             const songs = [
                 {
-                    name : 'Ignite',
-                    artist : 'Alan Walker',
+                    name : 'Streenini',
+                    artist : 'VI with Thobz',
                     image :'Ignite.jpg',
-                    songUrl :'Ignite.mp3',
+                    songUrl :'VI - Streenini (with Thobz).mp3',
                     duration :'03:49' 
                 },
                 {
                     name : 'Faded',
                     artist : 'Alan Walker',
                     image :'Faded.jpg',
-                    songUrl :'Faded.mp3',
-                    duration :'03:32' 
+                    songUrl :'void.mp3',
+                    duration :'03:40' 
                 },
                 {
                     name : 'Let Me Love',
@@ -351,8 +351,6 @@ window.onload = () =>{
                     DOM.audioHorListParent.insertAdjacentHTML('beforeend',content); 
 
             }
-
-
 
     })(DOMStrings,AnimationClass,getSongs);
 
