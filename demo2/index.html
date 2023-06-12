@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Capslock | Music Player</title>
-	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPSLOCK STUDIOS Player</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="../assets/img/icon.ico" type="image/x-icon"/>
+    
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/atlantis.min.css">
+	<link rel="stylesheet" href="css/style.css">
 
 	<!-- Fonts and icons -->
 	<script src="../assets/js/plugin/webfont/webfont.min.js"></script>
@@ -17,16 +26,8 @@
 			}
 		});
 	</script>
-
-	<!-- CSS Files -->
-	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../assets/css/atlantis.min.css">
-	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="css/style.css">
 </head>
-<body data-background-color="light">
+<bodydata-background-color="light">
 	<div class="wrapper">
 		<div class="main-header">
 			<!--  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Logo Header --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
@@ -47,7 +48,7 @@
 					</button>
 				</div>
 			</div>
-			<!--  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------End Logo Header --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!--  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------End Logo Header --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
 			<!--  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Navbar Header --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="light-blue2">
@@ -287,8 +288,19 @@
 			</nav>
 			<!--  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------End Navbar --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		</div>
+   
+    <!-- Created Two Layout-Grid -->
+    <main class="main">
 
-		<!--  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Sidebar --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+            <!-- Navigation Section Start -->
+
+            <div class="navOpen-btn">
+                <span class="material-icons">
+                    menu
+                </span>
+            </div>
+
+            <!--  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Sidebar --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		<div class="sidebar sidebar-style-2" data-background-color="beige">
 			<div class="sidebar-wrapper scrollbar scrollbar-inner">
 				<div class="sidebar-content">
@@ -457,273 +469,266 @@
 		</div>
         
 		<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------End Sidebar----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-
-		<div class="main-panel">
+		<div class="content">
+             <!-- Navigation Section End -->
+             <div class="main-panel">
 				
 				<main class="main">
-					  <!-- Musics Section Start -->
-					  <section class="music-sec"> 
+            <!-- Musics Section Start -->
+            <section class="music-sec"> 
 
-						<!-- Top Cover Start-->
-		
-						<div class="cover">
-							 <img src="img/Shigatsu.jpg" alt="" class="cover__img" id="recommended-image">
-							 <div class="cover__text">
-								 <h1 class="cover__title">The Next Big Thing!</h1>
-								   <a href="#" class="btn cover__play-btn" id="recommended-play-btn"> 
-										<span>Play Now</span>
-										<span class="material-icons">
-										play_circle_filled
-									   </span>  
-								</a>
-							 </div>
-						 </div>
-		
-						 <!-- Top Cover End-->
-		
-					
-						 <div class="music-con">
-		
-							<h1 class="heading-sec">My Favorites</h1>
-		
-							<!-- Music List Scroll Start-->
-		
-							<div class="music-con__list scroll-bar-hide">
-		
-									<!-- <div class="music-con__item">
-										<div class="music-con__img">
-											<img src="img/Cover-2.jpg" alt="">
-											<span class="music-con__play-btn">
-												<span class="material-icons play-btn">
-													play_circle_outline
-												</span>
-											</span>
-										</div>
-										<div class="music-list__text">
-											<h3 class="heading-3">   Gunaah  </h3>
-											<p class="music-artist-name">  Max Glover, Carl Brown </p>
-										</div>
-										
-									</div> -->
-							</div>
-		
-							  <!-- Music List Scroll End-->
-						 </div>
-		
-						 <div class="music-hor music-con">
-		
-							<h1 class="music-con__heading heading-sec">New Entries</h1>
-		
-							<div class="music-hor__list">
-		
-								 <!-- <div class="music-hor__item">
-									<div class="music-hor__item-inner">
-										<img src="img/album - 3.png" class="music-hor__img">
-										<h3 class="music-artist-name">Let me love</h3>
-									</div>
-		
-									<div class="music-hor__item-inner"> 
-		
-										<p class="music-hor__music-duration">02 : 30</p>
-					
-										<div class="music-hor__btn">
-											<span class="material-icons">
-												play_circle_filled
-											   </span>  
-										</div>
-															   
-									</div>
-		
-								</div>                            -->
-		
-							</div>
-				
-		
-						</div>
-		
-						<div class="music-con">
-		
-							<h1 class="heading-sec">Top Rated Songs</h1>
-		
-							<!-- Music List Scroll Start 2-->
-		
-							<div class="music-con__list scroll-bar-hide">
-		
-									<!-- <div class="music-con__item">
-										<div class="music-con__img">
-											<img src="img/Cover-2.jpg" alt="">
-											<span class="music-con__play-btn">
-												<span class="material-icons play-btn">
-													play_circle_outline
-												</span>
-											</span>
-										</div>
-										<div class="music-list__text">
-											<h3 class="heading-3">   Gunaah  </h3>
-											<p class="music-artist-name">  Max Glover, Carl Brown </p>
-										</div>
-										
-									</div>  
-									-->
-							</div>
-		
-							  <!-- Music List Scroll End 2-->
-						 </div>
-					
-					</section>
-					<!-- Musics Section End -->
-				</main>
-			  <!-- Music { Play Btn  /  Progress Bar / }  Start-->
+                <!-- Top Cover Start-->
 
-			  <section class="music-controller">
+                <div class="cover">
+                     <img src="img/Shigatsu.jpg" alt="" class="cover__img" id="recommended-image">
+                     <div class="cover__text">
+                         <h1 class="cover__title">The Next Big Thing!</h1>
+                           <a href="#" class="btn cover__play-btn" id="recommended-play-btn"> 
+                                <span>Play Now</span>
+                                <span class="material-icons">
+                                play_circle_filled
+                               </span>  
+                        </a>
+                     </div>
+                 </div>
 
-				<div class="music-controller__progress-bar">
-					<span class="music-controller__progress-bar-fill"></span>
-				</div>
-		
-				<div class="music-controller__list">
-		
-						<div class="music-controller__item">
-							<img src="img/Faded.jpg" alt="" class="music-controller__img audio-image">
-							<h3  class="music-artist-name audio-name" style="width:9rem;">Let me love</h3>
-						</div>
-		
-						<div class="music-controller__item"> 
-		
-							<div class="music-controller__btn audio-prev-btn">
-								<span class="material-icons">
-									skip_previous
-								</span>
-							</div>
-		
-							<div class="music-controller__btn audio-play-pause-btn">
-								<span class="material-icons">
-									play_circle_filled
-								   </span>  
-							</div>
-							<div class="music-controller__btn audio-next-btn">
-								<span class="material-icons">
-									skip_next
-								</span>
-			
-							</div>
-						   
-						</div>
-						<div class="music-controller__item phone-disable">
-		
-							<div class="music-controller__btn audio-shuffle">
-								<span class="material-icons">
-									shuffle
-								 </span>
-							</div>
-							<div class="music-controller__btn audio-volume">
-								<span class="material-icons">
-									volume_up
-								</span>
-							</div>
-							<div class="music-controller__btn audio-repeat">
-								<span class="material-icons">
-									repeat
-								 </span>
-							</div>
-		
-						</div>
-				</div>
-		
-		
-		
-		
-		  <!--- Open Music Player-->
-		
-			<section class="audio-player" id="audio-player-fullscreen">
-				
-		
-				<div class="audio-player__wrapper">
-		
-					<img src="img/Yaara.jpg" alt="" class="audio-player__img audio-image">
-				  
-					<div class="audio-player__text">
-						<h3 class="heading-3 audio-name">   Gunaah  </h3>
-						<p class="music-artist-name audio-singer-name">  Max Glover, Carl Brown </p>    
-					</div>  
-		
-				   <div class="audio-player__item audio-player__item--1">
-		
-						<div class="audio-player__btn-top audio-shuffle">
-							<span class="material-icons">
-								shuffle
-							</span>
-						</div>
-						<div class="audio-player__btn-top audio-volume">
-							<span class="material-icons">
-								volume_up
-							</span>
-						</div>
-						<div class="audio-player__btn-top audio-repeat">
-							<span class="material-icons">
-								repeat
-							</span>
-						</div>
-		
-				   </div>
-		
-		
-				   <div class="audio-player__timing-update">
-						<h3 class="audio-time" id="current-duration"> 01 : 06 </h3>
-						<h3 class="audio-time" id="end-duration"> 01 : 06 </h3>
-				  </div>
-				   <div class="audio-player__item">
-						<div class="music-controller__progress-bar audio-player__progress-bar">
-							<span class="music-controller__progress-bar-fill"></span>
-						</div>               
-				   </div>
-		
-				   <div class="audio-player__item audio-player__item--playBtn">
-		
-						<div class="audio-player__btn-bottom audio-prev-btn">
-							<span class="material-icons">
-								skip_previous
-							</span>
-						</div>
-		
-						<div class="audio-player__btn-bottom audio-play-pause-btn">
-							<span class="material-icons">
-								play_circle_filled
-							</span>  
-						</div>
-						<div class="audio-player__btn-bottom audio-next-btn">
-							<span class="material-icons">
-								skip_next
-							</span>
-						</div>
-		
-				   </div>
-		   
-				</div>
-		
-			</section>
-			
-			 
-			 <!-- Music { Play Btn  /  Progress Bar / }  End-->
-		
-			 <audio id="audio" class="audio" style="display: none;">
-				<source src="mp3/Gunaah.mp3"></source>
-			</audio>
-	</div>
+                 <!-- Top Cover End-->
+
             
+                 <div class="music-con">
+
+                    <h1 class="heading-sec">My Favorites</h1>
+
+                    <!-- Music List Scroll Start-->
+
+                    <div class="music-con__list scroll-bar-hide">
+
+                            <!-- <div class="music-con__item">
+                                <div class="music-con__img">
+                                    <img src="img/Cover-2.jpg" alt="">
+                                    <span class="music-con__play-btn">
+                                        <span class="material-icons play-btn">
+                                            play_circle_outline
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="music-list__text">
+                                    <h3 class="heading-3">   Gunaah  </h3>
+                                    <p class="music-artist-name">  Max Glover, Carl Brown </p>
+                                </div>
+                                
+                            </div> -->
+                    </div>
+
+                      <!-- Music List Scroll End-->
+                 </div>
+
+                 <div class="music-hor music-con">
+
+                    <h1 class="music-con__heading heading-sec">New Entries</h1>
+
+                    <div class="music-hor__list">
+
+                         <!-- <div class="music-hor__item">
+                            <div class="music-hor__item-inner">
+                                <img src="img/album - 3.png" class="music-hor__img">
+                                <h3 class="music-artist-name">Let me love</h3>
+                            </div>
+
+                            <div class="music-hor__item-inner"> 
+
+                                <p class="music-hor__music-duration">02 : 30</p>
             
-                <!-- Music { Play Btn  /  Progress Bar / }  End-->
+                                <div class="music-hor__btn">
+                                    <span class="material-icons">
+                                        play_circle_filled
+                                       </span>  
+                                </div>
+                                                       
+                            </div>
+
+                        </div>                            -->
+
+                    </div>
+        
+
+                </div>
+
+                <div class="music-con">
+
+                    <h1 class="heading-sec">Top Rated Songs</h1>
+
+                    <!-- Music List Scroll Start 2-->
+
+                    <div class="music-con__list scroll-bar-hide">
+
+                            <!-- <div class="music-con__item">
+                                <div class="music-con__img">
+                                    <img src="img/Cover-2.jpg" alt="">
+                                    <span class="music-con__play-btn">
+                                        <span class="material-icons play-btn">
+                                            play_circle_outline
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="music-list__text">
+                                    <h3 class="heading-3">   Gunaah  </h3>
+                                    <p class="music-artist-name">  Max Glover, Carl Brown </p>
+                                </div>
+                                
+                            </div>  
+                            -->
+                    </div>
+
+                      <!-- Music List Scroll End 2-->
+                 </div>
+            
+            </section>
+            <!-- Musics Section End -->
+
+    </main>
+
+    <!-- Music { Play Btn  /  Progress Bar / }  Start-->
+
+    <section class="music-controller">
+
+        <div class="music-controller__progress-bar">
+            <span class="music-controller__progress-bar-fill"></span>
+        </div>
+
+        <div class="music-controller__list">
+
+                <div class="music-controller__item">
+                    <img src="img/Faded.jpg" alt="" class="music-controller__img audio-image">
+                    <h3  class="music-artist-name audio-name" style="width:9rem;">Mlung'wam</h3>
+                </div>
+
+                <div class="music-controller__item"> 
+
+                    <div class="music-controller__btn audio-prev-btn">
+                        <span class="material-icons">
+                            skip_previous
+                        </span>
+                    </div>
+
+                    <div class="music-controller__btn audio-play-pause-btn">
+                        <span class="material-icons">
+                            play_circle_filled
+                           </span>  
+                    </div>
+                    <div class="music-controller__btn audio-next-btn">
+                        <span class="material-icons">
+                            skip_next
+                        </span>
+    
+                    </div>
+                   
+                </div>
+                <div class="music-controller__item phone-disable">
+
+                    <div class="music-controller__btn audio-shuffle">
+                        <span class="material-icons">
+                            shuffle
+                         </span>
+                    </div>
+                    <div class="music-controller__btn audio-volume">
+                        <span class="material-icons">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="music-controller__btn audio-repeat">
+                        <span class="material-icons">
+                            repeat
+                         </span>
+                    </div>
+
+                </div>
+        </div>
+
+
+
+    </section>
+
+  <!--- Open Music Player-->
+
+    <section class="audio-player" id="audio-player-fullscreen">
+        
+
+        <div class="audio-player__wrapper">
+
+            <img src="img/Yaara.jpg" alt="" class="audio-player__img audio-image">
+          
+            <div class="audio-player__text">
+                <h3 class="heading-3 audio-name">   Gunaah  </h3>
+                <p class="music-artist-name audio-singer-name">  Max Glover, Carl Brown </p>    
+            </div>  
+
+           <div class="audio-player__item audio-player__item--1">
+
+                <div class="audio-player__btn-top audio-shuffle">
+                    <span class="material-icons">
+                        shuffle
+                    </span>
+                </div>
+                <div class="audio-player__btn-top audio-volume">
+                    <span class="material-icons">
+                        volume_up
+                    </span>
+                </div>
+                <div class="audio-player__btn-top audio-repeat">
+                    <span class="material-icons">
+                        repeat
+                    </span>
+                </div>
+
+           </div>
+
+
+           <div class="audio-player__timing-update">
+                <h3 class="audio-time" id="current-duration"> 01 : 06 </h3>
+                <h3 class="audio-time" id="end-duration"> 01 : 06 </h3>
+          </div>
+           <div class="audio-player__item">
+                <div class="music-controller__progress-bar audio-player__progress-bar">
+                    <span class="music-controller__progress-bar-fill"></span>
+                </div>               
+           </div>
+
+           <div class="audio-player__item audio-player__item--playBtn">
+
+                <div class="audio-player__btn-bottom audio-prev-btn">
+                    <span class="material-icons">
+                        skip_previous
+                    </span>
+                </div>
+
+                <div class="audio-player__btn-bottom audio-play-pause-btn">
+                    <span class="material-icons">
+                        play_circle_filled
+                    </span>  
+                </div>
+                <div class="audio-player__btn-bottom audio-next-btn">
+                    <span class="material-icons">
+                        skip_next
+                    </span>
+                </div>
+
+           </div>
+   
+        </div>
+
+    </section>
+    
+     
+     <!-- Music { Play Btn  /  Progress Bar / }  End-->
 
      <audio id="audio" class="audio" style="display: none;">
         <source src="mp3/Gunaah.mp3"></source>
     </audio>
     <!-- Including External JavaScript File Here -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha256-eVNjHw5UeU0jUqPPpZHAkU1z4U+QFBBY488WvueTm88=" crossorigin="anonymous"></script>
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
 
-
-	<!----------------------------------Amen Amen------------->
-            
 	<!--   Core JS Files   -->
 	<script src="../assets/js/core/jquery.3.2.1.min.js"></script>
 	<script src="../assets/js/core/popper.min.js"></script>
@@ -735,7 +740,6 @@
 
 	<!-- jQuery Scrollbar -->
 	<script src="../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-
 
 	<!-- Chart JS -->
 	<script src="../assets/js/plugin/chart.js/chart.min.js"></script>
@@ -751,7 +755,6 @@
 
 	<!-- Bootstrap Notify -->
 	<script src="../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
-
 	<!-- jQuery Vector Maps -->
 	<script src="../assets/js/plugin/jqvmap/jquery.vmap.min.js"></script>
 	<script src="../assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
@@ -765,7 +768,7 @@
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
 	<script src="../assets/js/setting-demo.js"></script>
 	<script src="../assets/js/demo.js"></script>
-	<script>
+    <script>
 		$('#lineChart').sparkline([102,109,120,99,110,105,115], {
 			type: 'line',
 			height: '70',
