@@ -148,8 +148,7 @@ span {
     color: var(--color-pink);
     animation: loading 3s infinite cubic-bezier(0.19, 1, 0.22, 1); }
   .loading-sec__wait-text {
-    animation: loading-2 4s infinite; 
-  padding: 20px;}
+    animation: loading-2 4s infinite; }
   .loading-sec__legal {
     position: absolute;
     bottom: 5vh; }
